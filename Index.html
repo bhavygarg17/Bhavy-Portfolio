@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavy Garg Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+    transition: 0.3s;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.typing {
+    color: #38bdf8;
+    font-size: 20px;
+    height: 25px;
+}
+
+section {
+    padding: 30px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #38bdf8;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.light {
+    background: white;
+    color: black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Bhavy Garg</h1>
+    <p class="typing" id="typing"></p>
+    <button onclick="toggleMode()">Toggle Theme</button>
+</header>
+
+<section>
+    <h2>Skills</h2>
+    <div class="card">Python</div>
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">React (Learning)</div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <div class="card">
+        <b>Python Calculator</b><br>
+        <a href="https://github.com/bhavygarg17/python-calculator" target="_blank">View on GitHub</a>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">Email: bhavygarg17@gmail.com</div>
+</section>
+
+<script>
+let text = "Aspiring Software Developer 🚀";
+let i = 0;
+
+function typingEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 50);
+    }
+}
+typingEffect();
+
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
